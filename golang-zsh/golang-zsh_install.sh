@@ -4,8 +4,8 @@ sudo sh -c 'rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.1.linux-amd64.
 echo 'export PATH=$PATH:/usr/local/go/bin:~/go/bin' >> ~/.zshrc
 
 # add Completion to golang
-go get -u github.com/posener/complete/gocomplete
-gocomplete -install -y
+sudo sh -c 'go get -u github.com/posener/complete/gocomplete'
+sudo sh -c 'gocomplete -install -y'
 
 # install gofiber
 go get -u github.com/gofiber/fiber/v2
