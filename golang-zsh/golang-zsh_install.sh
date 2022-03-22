@@ -1,11 +1,9 @@
-# install golang (manual)
+# install latest golang version
 curl -OL $(echo -n "https://go.dev" ; curl https://go.dev/dl/ | grep "download.*downloadBox" | grep -io "/dl/.*$(uname -s).*gz")
 sudo sh -c 'rm -rf /usr/local/go && tar -C /usr/local -xzf $(ls | grep -io "go.*.*gz")'
 echo 'export PATH=$PATH:/usr/local/go/bin:~/go/bin/' >> ~/.zshrc
 
-# add Completion to golang
-# sudo sh -c 'go install github.com/posener/complete/gocomplete@latest' # older version
-# sudo sh -c 'gocomplete -install -y' # older version
+# add Completion to golang CLI
 go install github.com/posener/complete/gocomplete@latest
 gocomplete -install -y
 
