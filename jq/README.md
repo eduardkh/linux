@@ -35,3 +35,10 @@ jq -C "[paths | join(\".\")]" users.json
 ```bash
 jq -cC "paths | select(.[-1] == \"street\")" users.json
 ```
+
+> dates
+
+```bash
+# https://michaelheap.com/jq-select-date-before-today/
+jq -C "[.[] | select(.eol > (now | strftime(\"%Y-%m-%d\")))]" date.json
+```
