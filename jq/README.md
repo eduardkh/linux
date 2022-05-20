@@ -41,4 +41,6 @@ jq -cC "paths | select(.[-1] == \"street\")" users.json
 ```bash
 # https://michaelheap.com/jq-select-date-before-today/
 jq -C "[.[] | select(.eol > (now | strftime(\"%Y-%m-%d\")))]" date.json
+# strptime is not supported in windows
+jq -C ".not_after|strptime(\"%Y-%m-%dT%H:%M:%SZ\")" google.json
 ```
