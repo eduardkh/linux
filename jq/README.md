@@ -1,5 +1,11 @@
 # jq
 
+> sources
+
+[jq manual](https://stedolan.github.io/jq/manual/)
+
+[jq playground](https://jqplay.org/)
+
 > get all elements
 
 ```bash
