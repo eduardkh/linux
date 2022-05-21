@@ -12,13 +12,13 @@
 jq -C "." users.json
 ```
 
-> get first element
+> get first element in array
 
 ```bash
 jq -C ".[0]" users.json
 ```
 
-> get last element
+> get last element in array
 
 ```bash
 jq -C ".[-1]" users.json
@@ -34,6 +34,7 @@ jq -C ".[]|{id:.id, name:.name}" users.json
 
 ```bash
 jq "[.[]|{name,phone}]" users.json > users_phone_name.json
+jq ".results[]|{name:.name,gender:.gender}" swapi.json
 ```
 
 > get all paths (nested included)
