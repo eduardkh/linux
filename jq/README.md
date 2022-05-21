@@ -30,6 +30,12 @@ jq -C ".[-1]" users.json
 jq -C ".[]|{id:.id, name:.name}" users.json
 ```
 
+> extract specific elements to a new json array
+
+```bash
+jq "[.[]|{name,phone}]" users.json > users_phone_name.json
+```
+
 > get all paths (nested included)
 
 ```bash
