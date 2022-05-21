@@ -42,6 +42,12 @@ jq -C "[paths | join(\".\")]" users.json
 jq -cC "paths | select(.[-1] == \"street\")" users.json
 ```
 
+> extract time field in two formats
+
+```bash
+jq "{time:.not_after,unix:.not_after|fromdate}" google.json
+```
+
 > dates
 
 ```bash
