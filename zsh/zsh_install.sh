@@ -1,9 +1,9 @@
 # install zsh
-sudo sudo apt install zsh -y
+sudo apt install zsh -y
 
 # install plugins
-sudo sudo apt install zsh-autosuggestions -y
-sudo sudo apt install zsh-syntax-highlighting -y
+sudo apt install zsh-autosuggestions -y
+sudo apt install zsh-syntax-highlighting -y
 
 # install omz
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
