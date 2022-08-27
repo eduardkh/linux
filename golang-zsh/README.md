@@ -4,5 +4,6 @@
 
 ```
 git clone https://github.com/eduardkh/linux.git
-bash linux/golang-zsh/golang-zsh_install.sh
+chmod +x linux/golang-zsh/golang-zsh_install.sh
+linux/golang-zsh/golang-zsh_install.sh
 ```
