@@ -43,4 +43,6 @@ yq '[.[-1].name]' users.yaml
 yq '.[]|(.name,.phone)' users.yaml
 # so i pipe it to jq, get what i need and pipe it back to yq
 yq users.yaml -o json | jq '[.[]|.name,.phone]' | yq -P
+# build a new list of objects
+yq users.yaml -o json | jq '[.[]|{id:.id, name:.name, email:.email}]' | yq -P
 ```
