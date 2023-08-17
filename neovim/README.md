@@ -104,6 +104,26 @@ space v # open vertical terminal
 alt+v # toggle vertical terminal
 ```
 
+> search and replace
+
+```bash
+/searchterm enter # search for a word
+n # next term down
+N # next term up
+:%s/pattern/replacement/g # replace all occurrences in the file
+# alternatives for "%"
+1,$: The same as %, applies to the entire file.
+1,5: Applies the command to lines 1 through 5.
+.,$: Applies the command from the current line to the end of the file.
+.,+2: Applies the command from the current line to the next 2 lines.
+
+yy # yank (cut) the current line
+p # paste below the current line
+P # paste above the current line
+dd # delete the current line
+d5d # delete next 5 lines
+```
+
 [Dreams of Code - neovim](https://www.youtube.com/watch?v=Mtgo-nP_r8Y)
 
 [nvchad - install](https://nvchad.com/docs/quickstart/install)
