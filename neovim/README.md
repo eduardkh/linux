@@ -58,6 +58,52 @@ rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 ```
 
+> basic commands
+
+```bash
+# space is leader key
+space t h # choose theme
+space f f # find file
+space f h # help
+space f b # search in open files
+space c h # open cheat sheet
+
+tab # next buffer (file)
+shift+tab # previous buffer (file)
+ctrl+s # save buffer
+space x # close buffer
+u # undo
+ctrl+r # redo
+
+# in nvim (vi)
+:TSInstall python # install python highlighting
+:TSInstallInfo # list installed
+
+:sp # split
+:vsp # split
+:x # save and close buffer
+```
+
+> file tree
+
+```bash
+ctrl+n # open file tree
+m # toggle mark
+a # add file
+c # copy file
+p # paste file
+r # rename file
+```
+
+> terminal
+
+```bash
+space h # open horizontal terminal
+alt+h # toggle horizontal terminal
+space v # open vertical terminal
+alt+v # toggle vertical terminal
+```
+
 [Dreams of Code - neovim](https://www.youtube.com/watch?v=Mtgo-nP_r8Y)
 
 [nvchad - install](https://nvchad.com/docs/quickstart/install)
