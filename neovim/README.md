@@ -43,6 +43,10 @@ ls /etc/alternatives -l | grep nvim
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts
 ./install.sh JetBrainsMono
+
+# for MobaXterm
+choco install nerd-fonts-JetBrainsMono -y
+# set terminal settings > terminal font settings to "JetBrainsMonoNFM"
 ```
 
 > install nvchad
