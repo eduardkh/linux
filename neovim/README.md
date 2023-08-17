@@ -58,7 +58,7 @@ rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 ```
 
-> basic commands
+> nvim basic commands
 
 ```bash
 # space is leader key
@@ -84,7 +84,7 @@ ctrl+r # redo
 :x # save and close buffer
 ```
 
-> file tree
+> nvim file tree
 
 ```bash
 ctrl+n # open file tree
@@ -95,7 +95,7 @@ p # paste file
 r # rename file
 ```
 
-> terminal
+> nvim terminal
 
 ```bash
 space h # open horizontal terminal
@@ -120,7 +120,7 @@ diw # Delete the current word.
 yaw # Yank (copy) the current word.
 ```
 
-> search and replace
+> vi (nvim) search and replace
 
 ```bash
 /searchterm enter # search for a word
