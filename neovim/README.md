@@ -104,6 +104,22 @@ space v # open vertical terminal
 alt+v # toggle vertical terminal
 ```
 
+> vi (nvim) operators
+
+```bash
+# line operators
+yy # yank (cut) the current line
+p # paste below the current line
+P # paste above the current line
+dd # delete the current line
+d5d # delete next 5 lines
+
+# word operators
+ciw # Change the current word (delete and enter insert mode).
+diw # Delete the current word.
+yaw # Yank (copy) the current word.
+```
+
 > search and replace
 
 ```bash
@@ -116,12 +132,6 @@ N # next term up
 1,5: Applies the command to lines 1 through 5.
 .,$: Applies the command from the current line to the end of the file.
 .,+2: Applies the command from the current line to the next 2 lines.
-
-yy # yank (cut) the current line
-p # paste below the current line
-P # paste above the current line
-dd # delete the current line
-d5d # delete next 5 lines
 ```
 
 [Dreams of Code - neovim](https://www.youtube.com/watch?v=Mtgo-nP_r8Y)
