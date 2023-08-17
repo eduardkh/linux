@@ -141,3 +141,7 @@ N # next term up
 [Dreams of Code - neovim](https://www.youtube.com/watch?v=Mtgo-nP_r8Y)
 
 [nvchad - install](https://nvchad.com/docs/quickstart/install)
+
+[nerdfonts](https://www.nerdfonts.com/font-downloads) individual fonts
+
+[programmingfonts](https://www.programmingfonts.org/) preview fonts
