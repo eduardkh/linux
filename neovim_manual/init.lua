@@ -1,8 +1,9 @@
 -- Basic Neovim settings
-vim.cmd('set expandtab') -- Enable the use of spaces instead of tabs
-vim.cmd('set tabstop=2') -- Number of spaces that a <Tab> in the file counts for
-vim.cmd('set softtabstop=2') -- Number of spaces that a <Tab> counts for while performing editing operations
-vim.cmd('set shiftwidth=2') -- Size of an 'indent'
+vim.cmd('set expandtab') -- Enable the use of spaces instead of tabs for indentation
+vim.cmd('set tabstop=2') -- Number of spaces a tab character represents
+vim.cmd('set softtabstop=2') -- Number of spaces used for auto-indentation
+vim.cmd('set shiftwidth=2') -- Number of spaces to use for each step of (auto)indent
+vim.g.mapleader = " " -- Set the Leader key to spacebar
 
 -- Path for the lazy loader
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -11,7 +12,7 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
         "git", "clone", "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git", "--branch=stable", -- latest stable release
+        "https://github.com/folke/lazy.nvim.git", "--branch=stable", -- Clone the stable branch of lazy.nvim
         lazypath
     })
 end
@@ -21,23 +22,24 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugin configuration
 local plugins = {
-    {"catppuccin/nvim", name = "catppuccin", priority = 1000}, -- Catppuccin theme plugin
+    {"catppuccin/nvim", name = "catppuccin", priority = 1000}, -- Configuration for Catppuccin theme plugin
     {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.5', -- Specific version tag
-        dependencies = {'nvim-lua/plenary.nvim'} -- Dependency for telescope
+        'nvim-telescope/telescope.nvim', -- Telescope plugin
+        tag = '0.1.5', -- Use specific version tag
+        dependencies = {'nvim-lua/plenary.nvim'} -- Dependencies required by Telescope
     }
 }
 
-local opts = {} -- Options for the lazy loader, empty if default
+local opts = {} -- Options for the lazy loader; empty for defaults
 
 -- Setup the lazy loader with the defined plugins
 require("lazy").setup(plugins, opts)
 
--- Telescope setup
+-- Telescope setup with key mappings
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', builtin.find_files, {}) -- Key mapping for telescope find_files function
+vim.keymap.set('n', '<C-p>', builtin.find_files, {}) -- Map Ctrl-p to Telescope's find_files function
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {}) -- Map Leader+fg to Telescope's live_grep function
 
 -- Catppuccin theme setup and application
-require("catppuccin").setup() -- Setup Catppuccin theme
-vim.cmd("colorscheme catppuccin") -- Apply Catppuccin colorscheme
+require("catppuccin").setup() -- Initialize the Catppuccin theme
+vim.cmd("colorscheme catppuccin") -- Set Catppuccin as the current colorscheme

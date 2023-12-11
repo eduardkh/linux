@@ -55,3 +55,10 @@ ls /etc/alternatives -l | grep nvim
 mkdir ~/.config/nvim/
 vi ~/.config/nvim/init.lua
 ```
+
+> add live grep
+
+```bash
+sudo apt-get install ripgrep
+rg --version
+```
