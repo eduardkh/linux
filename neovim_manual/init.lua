@@ -22,12 +22,12 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugin configuration
 local plugins = {
-    {"catppuccin/nvim", name = "catppuccin", priority = 1000}, -- Configuration for Catppuccin theme plugin
+    {"catppuccin/nvim", name = "catppuccin", priority = 1000}, -- Catppuccin theme plugin configuration
     {
-        'nvim-telescope/telescope.nvim', -- Telescope plugin
+        'nvim-telescope/telescope.nvim', -- Telescope plugin for extended navigation and searching
         tag = '0.1.5', -- Use specific version tag
         dependencies = {'nvim-lua/plenary.nvim'} -- Dependencies required by Telescope
-    }
+    }, {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"} -- Treesitter plugin for better syntax highlighting
 }
 
 local opts = {} -- Options for the lazy loader; empty for defaults
@@ -39,6 +39,14 @@ require("lazy").setup(plugins, opts)
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-p>', builtin.find_files, {}) -- Map Ctrl-p to Telescope's find_files function
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {}) -- Map Leader+fg to Telescope's live_grep function
+
+-- Treesitter configuration
+local configs = require("nvim-treesitter.configs")
+configs.setup({
+    ensure_installed = {"lua", "javascript", "html"}, -- List of languages to be installed
+    highlight = {enable = true}, -- Enable Treesitter-based highlighting
+    indent = {enable = true} -- Enable Treesitter-based indentation
+})
 
 -- Catppuccin theme setup and application
 require("catppuccin").setup() -- Initialize the Catppuccin theme
