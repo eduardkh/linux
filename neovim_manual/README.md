@@ -62,3 +62,15 @@ vi ~/.config/nvim/init.lua
 sudo apt-get install ripgrep
 rg --version
 ```
+
+> tips and tricks
+
+```bash
+# macro
+qq # start macro recording
+q  # end macro recording
+@q # replay macro
+
+# source current file
+:source%
+```
