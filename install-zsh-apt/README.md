@@ -4,7 +4,8 @@
 
 ```bash
 git clone https://github.com/eduardkh/linux.git
-bash linux/zsh-apt/zsh_install.sh
+bash linux/install-zsh-apt/zsh_install.sh
+
 ```
 
 > manual install
