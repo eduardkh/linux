@@ -112,11 +112,18 @@ alt+v # toggle vertical terminal
 
 ```bash
 # line operators
+zz # center screen
+w # move cursor to the next word
+b # move cursor to the previous word
 yy # yank (cut) the current line
 p # paste below the current line
 P # paste above the current line
+xx # delete character under cursor
 dd # delete the current line
 d5d # delete next 5 lines
+v # visual mode
+shift+v # visual mode (line)
+control+shift+v # visual mode (block)
 
 # word operators
 ciw # Change the current word (delete and enter insert mode).
