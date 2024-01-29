@@ -62,6 +62,12 @@ rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 ```
 
+> find default configuration file location
+
+```bash
+grep -ir numberwidth ~/.config/nvim
+```
+
 > nvim basic commands
 
 ```bash
@@ -122,7 +128,7 @@ p # paste below the current line
 P # paste above the current line
 xx # delete character under cursor
 dd # delete the current line
-d5d # delete next 5 lines
+d5d (or 5dd) # delete next 5 lines
 a # 'append' insert mode (start typing to the right of the cursor)
 shift+a # 'append' insert mode (start typing at the end of the line)
 i # 'insert' insert mode (start typing to the left of the cursor)
@@ -137,6 +143,13 @@ control+shift+v # visual mode (block)
 ciw # Change the current word (delete and enter insert mode).
 diw # Delete the current word.
 yaw # Yank (copy) the current word.
+
+# Commands
+:set number (nu) # Display line numbers
+:set nonumber (nonu) # Hide line numbers
+:set relativenumber (rnu) # Display relative line numbers
+:set norelativenumber (nornu) # Hide relative line numbers
+:set numberwidth=2
 ```
 
 > vi (nvim) search and replace
