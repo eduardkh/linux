@@ -147,8 +147,10 @@ yaw # Yank (copy) the current word.
 # Commands
 :set number (nu) # Display line numbers
 :set nonumber (nonu) # Hide line numbers
+:set number! (nu!) # toggle line numbers
 :set relativenumber (rnu) # Display relative line numbers
 :set norelativenumber (nornu) # Hide relative line numbers
+:set relativenumber! (rnu!) # toggle relative line numbers
 :set numberwidth=2
 ```
 
