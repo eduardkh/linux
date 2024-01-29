@@ -139,10 +139,12 @@ v # visual mode
 shift+v # visual mode (line)
 control+shift+v # visual mode (block)
 
-# word operators
+# word operators (combine commands)
 ciw # Change the current word (delete and enter insert mode).
 diw # Delete the current word.
 yaw # Yank (copy) the current word.
+dw # delete the word to the right
+db # delete the word to the left
 
 # Commands
 :set number (nu) # Display line numbers
@@ -152,6 +154,7 @@ yaw # Yank (copy) the current word.
 :set norelativenumber (nornu) # Hide relative line numbers
 :set relativenumber! (rnu!) # toggle relative line numbers
 :set numberwidth=2
+:echo stdpath("config") # get the location of the vim config file
 ```
 
 > vi (nvim) search and replace
