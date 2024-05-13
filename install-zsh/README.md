@@ -1,9 +1,11 @@
 # install zsh with omz
 
-> install with git
+> install
 
 ```bash
 git clone https://github.com/eduardkh/linux.git
+# on Ubuntu install make
+sudo apt install make
 bash linux/install-zsh-apt/zsh_install.sh
 
 ```
