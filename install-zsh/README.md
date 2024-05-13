@@ -6,14 +6,8 @@
 git clone https://github.com/eduardkh/linux.git
 # on Ubuntu install make
 sudo apt install make
-bash linux/install-zsh-apt/zsh_install.sh
+make -C linux/install-zsh/ ubuntu
 
-```
-
-> manual install
-
-```bash
-nano zsh_install.sh # paste zsh_install.sh file content here
-chmod +x zsh_install.sh
-./zsh_install.sh
+# on Rocky install make
+make -C linux/install-zsh/ rocky
 ```
